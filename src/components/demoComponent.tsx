@@ -1,14 +1,12 @@
 import React, { useState } from 'react'
-import Demo from '@/components/Class'
 
-function App() {
+function Demo() {
   const [ count, setCounts ] = useState('')
   const onChange = (e: any) => {
     setCounts(e.target.value + 1)
   }
   return (
     <>
-      <Demo />
       <h2>webpack5+react+ts</h2>
       <h3>{count}</h3>
       <h3>{count}</h3>
@@ -20,4 +18,4 @@ function App() {
     </>
   )
 }
-export default App
+export default Demo
