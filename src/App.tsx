@@ -1,6 +1,9 @@
+import { Button } from 'antd'
 import React from 'react'
 
 function App() {
-  return <h2>webpack5-react-ts</h2>
+  return<>
+    <Button>这是个button</Button>
+  </>
 }
 export default App
