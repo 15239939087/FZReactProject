@@ -1,6 +1,9 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './App';
+// import "@arco-design/web-react/dist/css/arco.css";
+import 'antd/dist/antd.css';
+
 console.log('NODE_ENV', process.env.NODE_ENV)
 console.log('BASE_ENV', process.env.BASE_ENV)
 const root = document.getElementById('root');

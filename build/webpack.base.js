@@ -96,14 +96,14 @@ module.exports = {
     }),
     new FriendlyErrorsWebpackPlugin({
       compilationSuccessInfo: {
-        messages: ['You application is running here http://localhost:3000'],
+        messages: ['You application is running here http://localhost:3111'],
       },
       // default is true
       clearConsole: true,
     }),
     new webpack.DefinePlugin({
       'process.env.BASE_ENV': JSON.stringify(process.env.BASE_ENV)
-    })
+    }),
   ],
   cache: {
     type: 'filesystem', // 使用文件缓存
