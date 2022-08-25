@@ -1,15 +1,26 @@
 import React, { useState } from 'react'
-import Demo from '@/components/Class'
-import { Button } from "@arco-design/web-react";
+import Login from './pages/Login';
+import Welcome from './pages/Welcome';
+import { Routes, Route, Link, useLocation, BrowserRouter } from "react-router-dom";
+import { TransitionGroup, CSSTransition } from "react-transition-group";
+import store from '@/models/index'
+import { Provider } from 'react-redux'
 
-function App() {
-  const [ count, setCounts ] = useState('')
-
+const App = () => {
+  const location = useLocation();
+  console.log(location)
   return (
-    <>
-     啊时代大厦
-     <Button>测试</Button>
-    </>
+    <Provider store={store}>
+      <TransitionGroup component={null}>
+        <CSSTransition key={location.key} classNames="fade" timeout={300}>
+          <Routes location={location}>
+            <Route path="/login" element={<Login />} />
+            <Route path="/welcome" element={<Welcome />} />
+          </Routes>
+        </CSSTransition>
+      </TransitionGroup>
+    </Provider>
   )
 }
+
 export default App

@@ -21,12 +21,11 @@ module.exports = {
         use: ['thread-loader', 'babel-loader']
       },
       {
-        test: /.css$/, //匹配所有的 css 文件
-        include: [path.resolve(__dirname, '../src')],
+        test: /.css$/i, //匹配所有的 css 文件
         use: [
           'style-loader',
           'css-loader',
-          'postcss-loader'
+          'postcss-loader',
         ]
       },
       {
@@ -38,6 +37,10 @@ module.exports = {
           'postcss-loader',
           'less-loader'
         ]
+      },
+      {
+        test: /\.svg$/,
+        use: ['@svgr/webpack'],
       },
       {
         test:/.(png|jpg|jpeg|gif|svg)$/, // 匹配图片文件
