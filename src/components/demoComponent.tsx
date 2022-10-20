@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 
 function Demo() {
-  const [ count, setCounts ] = useState('')
+  const [count, setCounts] = useState("");
   const onChange = (e: any) => {
-    setCounts(e.target.value + 1)
-  }
+    setCounts(e.target.value + 1);
+  };
   return (
     <>
       <h2>webpack5+react+ts</h2>
@@ -16,6 +16,6 @@ function Demo() {
       <p>非受控组件</p>
       <input type="text" />
     </>
-  )
+  );
 }
-export default Demo
+export default Demo;

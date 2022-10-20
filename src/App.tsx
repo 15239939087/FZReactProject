@@ -1,14 +1,21 @@
-import React, { useState } from 'react'
-import Login from './pages/Login';
-import Welcome from './pages/Welcome';
-import { Routes, Route, Link, useLocation, BrowserRouter } from "react-router-dom";
+import React, { useState } from "react";
+import Login from "./pages/Logins";
+import Welcome from "./pages/Welcome";
+import {
+  Routes,
+  Route,
+  Link,
+  useLocation,
+  BrowserRouter,
+} from "react-router-dom";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
-import store from '@/models/index'
-import { Provider } from 'react-redux'
+import store from "@/models/index";
+import { Provider } from "react-redux";
 
 const App = () => {
   const location = useLocation();
-  console.log(location)
+  console.log(location);
+
   return (
     <Provider store={store}>
       <TransitionGroup component={null}>
@@ -20,7 +27,7 @@ const App = () => {
         </CSSTransition>
       </TransitionGroup>
     </Provider>
-  )
-}
+  );
+};
 
-export default App
+export default App;

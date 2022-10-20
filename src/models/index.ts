@@ -1,8 +1,7 @@
-import { configureStore } from '@reduxjs/toolkit';
-import feedRecordReducer from './modules/feedRecordslice';
+import { configureStore } from "@reduxjs/toolkit";
+import feedRecordReducer from "./modules/feedRecordslice";
 
-
-import middlewares from './middlewares';
+import middlewares from "./middlewares";
 
 const store = configureStore({
   reducer: {
@@ -12,7 +11,7 @@ const store = configureStore({
    * toolkit默认有检测serializable的中间件 state.theme有很多函数 会导致serializable检测的报错 是否考虑重新对theme的组织？
    * https://redux.js.org/faq/organizing-state#can-i-put-functions-promises-or-other-non-serializable-items-in-my-store-state
    */
-  middleware: getDefaultMiddleware =>
+  middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({ serializableCheck: false }).concat(middlewares),
 });
 
