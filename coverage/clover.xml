@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1667896622583" clover="3.2.0">
+  <project timestamp="1667896622583" name="All files">
+    <metrics statements="22" coveredstatements="15" conditionals="10" coveredconditionals="5" methods="6" coveredmethods="4" elements="38" coveredelements="24" complexity="0" loc="22" ncloc="22" packages="2" files="2" classes="2"/>
+    <package name="Link">
+      <metrics statements="8" coveredstatements="8" conditionals="2" coveredconditionals="1" methods="3" coveredmethods="3"/>
+      <file name="index.tsx" path="/Users/chenwei/Desktop/FZ/code/FZReactProject/src/pages/Link/index.tsx">
+        <metrics statements="8" coveredstatements="8" conditionals="2" coveredconditionals="1" methods="3" coveredmethods="3"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="10" count="3" type="stmt"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="13" count="3" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="17" count="3" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="21" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="MyPage">
+      <metrics statements="14" coveredstatements="7" conditionals="8" coveredconditionals="4" methods="3" coveredmethods="1"/>
+      <file name="index.tsx" path="/Users/chenwei/Desktop/FZ/code/FZReactProject/src/pages/MyPage/index.tsx">
+        <metrics statements="14" coveredstatements="7" conditionals="8" coveredconditionals="4" methods="3" coveredmethods="1"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="13" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
