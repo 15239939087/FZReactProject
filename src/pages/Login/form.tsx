@@ -25,7 +25,7 @@ export default function LoginForm() {
   const t = locale["zh-CN"];
   const [rememberPassword, setRememberPassword] = useState(!!loginParams);
 
-  function afterLoginSuccess(params) {
+  function afterLoginSuccess(params: any) {
     // 记住密码
     if (rememberPassword) {
       setLoginParams(JSON.stringify(params));
@@ -38,7 +38,7 @@ export default function LoginForm() {
     window.location.href = "/";
   }
 
-  function login(params) {
+  function login(params: any) {
     setErrorMessage("");
     setLoading(true);
     // 跳转首页

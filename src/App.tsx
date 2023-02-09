@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import Login from "./pages/Logins";
+import Login from "./pages/Login";
 import Welcome from "./pages/Welcome";
+import Lock from "./pages/Lock";
 import {
   Routes,
   Route,
@@ -21,7 +22,8 @@ const App = () => {
       <TransitionGroup component={null}>
         <CSSTransition key={location.key} classNames="fade" timeout={300}>
           <Routes location={location}>
-            <Route path="/login" element={<Login />} />
+            <Route path="/" element={<Lock />} />
+            {/* <Route path="/" element={<Login />} /> */}
             <Route path="/welcome" element={<Welcome />} />
           </Routes>
         </CSSTransition>

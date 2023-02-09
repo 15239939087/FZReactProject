@@ -6,6 +6,8 @@ import styles from "./style/index.module.less";
 import { IconXiguaColor } from "@arco-design/web-react/icon";
 import { useDispatch, useSelector } from "react-redux";
 import { selectTodayFeedCount } from "@/models/modules/feedRecordslice";
+import Api from './service';
+
 function Login() {
   useEffect(() => {
     document.body.setAttribute("arco-theme", "light");
@@ -14,6 +16,16 @@ function Login() {
   const storeData = useSelector(selectTodayFeedCount);
   console.log(storeData);
 
+  useEffect(() => {
+    // fetch('http://localhost:3333/article/list', ).then((data) => {
+    //   return data.json()
+    // }).then((res) => {
+    //   console.log(res)
+    // })
+    Api.getArticleInfo().then((data) => {
+      console.log(data, 999);
+    });
+  })
   return (
     <div className={styles.container}>
       <div className={styles.logo}>
