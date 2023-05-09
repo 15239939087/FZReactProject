@@ -1,8 +1,8 @@
-import { get } from "@/utils/request";
+import { get, post } from "@/utils/request";
 
-const api = {
-  // home_api: params => post("/table", stringify(params)), //不使用get post封装 stringify看需求使用
-  getArticleInfo: (params?: any) => get("/api/article/list", params) //使用get post封装
+const Api = {
+  home_api: (params: any) => post("/user/login", params), //不使用get post封装 stringify看需求使用
+  getArticleInfo: (params?: any) => get("/article/list", params) //使用get post封装
 };
 
-export default api;
+export default Api;

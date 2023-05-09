@@ -13,6 +13,7 @@ import useStorage from "@/utils/useStorage";
 import useLocale from "@/utils/useLocale";
 import locale from "./locale";
 import styles from "./style/index.module.less";
+import Api from "./service";
 
 export default function LoginForm() {
   const formRef = useRef<FormInstance>();
@@ -38,17 +39,32 @@ export default function LoginForm() {
     window.location.href = "/";
   }
 
+  const getData = () => {
+    fetch('https:www.baidu.com').then((res) => {
+      return res.json()
+    }).then((data) => {
+      console.log(data, '后端请求来的数据')
+    })
+  }
   function login(params: any) {
+    
+    console.log(params, 8989);
     setErrorMessage("");
     setLoading(true);
-    // 跳转首页
-    window.location.href = "/welcome";
+    Api.home_api(params)
+    // // 跳转首页
+    // window.location.href = "/welcome";
+
   }
 
   function onSubmitClick() {
     formRef.current.validate().then((values) => {
       login(values);
     });
+  }
+
+  function onRegisterClick() {
+    window.location.href = "/register";
   }
 
   // 读取 localStorage，设置初始值
@@ -75,7 +91,7 @@ export default function LoginForm() {
         initialValues={{ userName: "admin", password: "admin" }}
       >
         <Form.Item
-          field="userName"
+          field="mobile"
           rules={[{ required: true, message: t["login.form.userName.errMsg"] }]}
         >
           <Input
@@ -108,6 +124,7 @@ export default function LoginForm() {
             type="text"
             long
             className={styles["login-form-register-btn"]}
+            onClick={onRegisterClick}
           >
             {t["login.form.register"]}
           </Button>

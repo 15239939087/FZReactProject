@@ -16,16 +16,6 @@ function Login() {
   const storeData = useSelector(selectTodayFeedCount);
   console.log(storeData);
 
-  useEffect(() => {
-    // fetch('http://localhost:3333/article/list', ).then((data) => {
-    //   return data.json()
-    // }).then((res) => {
-    //   console.log(res)
-    // })
-    Api.getArticleInfo().then((data) => {
-      console.log(data, 999);
-    });
-  })
   return (
     <div className={styles.container}>
       <div className={styles.logo}>
